@@ -4,7 +4,7 @@ import requests
 import subprocess
 import urllib.parse
 
-__ENDPOINT_URL__: str = "https://dodgerblue-walrus-972474.hostingersite.com/api"
+__ENDPOINT_URL__: str = "https://v2xeno.squareweb.app/api"
 
 class CarParkTool:
     def __init__(self, access_key) -> None:
