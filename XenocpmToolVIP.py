@@ -791,7 +791,7 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[!] ENTER SPOILER ID'))
                 custom = IntPrompt.ask("[bold blue][?] ENTER NEW SPOILER ID[/bold blue]")
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[!] SAVING YOUR DATA'))
-                if cpm.telmunnongodz(car_id, custom):
+                if cpm.spoiler(car_id, custom):
                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
@@ -807,7 +807,7 @@ if __name__ == "__main__":
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[!] ENTER BODYKIT ID'))
                 custom = IntPrompt.ask("[bold blue][?] INSERT BODYKIT ID[/bold blue]")
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[!] SAVING YOUR DATA'))
-                if cpm.telmunnongonz(car_id, custom):
+                if cpm.body_kit(car_id, custom):
                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
