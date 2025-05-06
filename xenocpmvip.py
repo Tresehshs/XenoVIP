@@ -444,5 +444,16 @@ class Tresehshs:
         response = requests.post(f"{__ENDPOINT_URL__}/unlock_all_lamborghinis", params=params, data=payload)
         response_decoded = response.json()
         return response_decoded.get("ok")
+        
+    def copy_livery(self, source_car_id, target_car_id):
+        payload = {
+        "account_auth": self.auth_token,
+        "source_car_id": source_car_id,
+        "target_car_id": target_car_id,
+        }
+        params = {"key": self.access_key}
+        response = requests.post(f"{__ENDPOINT_URL__}/copy_livery", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")
  
 
