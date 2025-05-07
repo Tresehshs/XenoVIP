@@ -1005,6 +1005,21 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
                     sleep(4)
                     continue  
+            elif service == 52:  # Clone Car To Another Account
+                source_car_id = Prompt.ask("[?] Enter Source Car ID")
+                target_email = Prompt.ask("[?] Enter Target Account Email")
+                target_password = Prompt.ask("[?] Enter Target Account Password")    
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[%] CLONING CAR TO TARGET ACCOUNT, PLEASE WAIT...'))
+                if cpm.clone_car_to(source_car_id, target_email, target_password):
+                    print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
+                    answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
+                    if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank you for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
+                    else: continue
+                else:
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE CHECK YOUR INPUTS AND TRY AGAIN'))
+                    sleep(4)
+                    continue
             else: continue
             break
                        
