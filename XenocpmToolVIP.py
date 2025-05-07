@@ -228,6 +228,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.red_to_yellow, '(49): Car Incline              1K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(50): Unlock Lambo (IOS ONLY)  5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(51): Clone Livery             2.5K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '(52): Clone Car to Another Acc 4K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐂𝐏𝐌 ]==============='))
