@@ -176,7 +176,7 @@ if __name__ == "__main__":
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"]
             print(Colorate.Horizontal(Colors.red_to_yellow, '{01}: Increase Money           1.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{02}: Increase Coins           4.5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{03}: King Rank                8K'))
@@ -228,8 +228,7 @@ if __name__ == "__main__":
             print(Colorate.Horizontal(Colors.red_to_yellow, '(49): Car Incline              1K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(50): Unlock Lambo (IOS ONLY)  5K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '(51): Clone Livery             2.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(52): Copy Car to Another      4K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(53): Custom Hp (All Cars)     4K'))
+            print(Colorate.Horizontal(Colors.red_to_yellow, '(52): Custom Hp (All Cars)     4K'))
             print(Colorate.Horizontal(Colors.red_to_yellow, '{0} : Exit'))
             
             print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐂𝐏𝐌 ]==============='))
@@ -1007,23 +1006,7 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
                     sleep(4)
                     continue
-            elif service == 52:  # Copy Car To Another Account
-               source_car_id = Prompt.ask("[?] Enter Source Car ID")
-               target_email = Prompt.ask("[?] Enter Target Account Email")
-               target_password = Prompt.ask("[?] Enter Target Account Password")
-               target_car_id = Prompt.ask("[?] Enter Target Car ID")
-               print(Colorate.Horizontal(Colors.red_to_yellow, '[%] COPYING CAR TO TARGET ACCOUNT, PLEASE WAIT...'))
-               if cpm.copy_car_to(source_car_id, target_email, target_password, target_car_id):
-                   print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
-                   answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
-                   if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
-                   else: continue
-               else:
-                   print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
-                   print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE CHECK YOUR INPUTS AND TRY AGAIN'))
-                   sleep(4)
-                   continue
-            elif service == 53:  # Hack Cars Speed
+            elif service == 52:  # Hack Cars Speed
                 new_hp = IntPrompt.ask("[bold][?] Enter New HP[/bold]")
                 new_inner_hp = IntPrompt.ask("[bold][?] Enter New Inner Hp[/bold]")
                 new_nm = IntPrompt.ask("[bold][?] Enter New NM[/bold]")
