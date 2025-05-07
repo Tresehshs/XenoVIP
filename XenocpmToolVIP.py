@@ -1012,7 +1012,7 @@ if __name__ == "__main__":
                 new_nm = IntPrompt.ask("[?] Enter New NM")
                 new_torque = IntPrompt.ask("[?] Enter New Torque") 
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[%] HACKING ALL CARS SPEED, PLEASE WAIT...'))  
-                if cpm.hack_cars_speed(new_hp, new_inner_hp, new_nm, new_torque):
+                if cpm.speed_all_cars(new_hp, new_inner_hp, new_nm, new_torque):
                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
