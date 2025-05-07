@@ -456,7 +456,7 @@ class Tresehshs:
         response_decoded = response.json()
         return response_decoded.get("ok")
         
-    def hack_cars_speed(self, new_hp, new_inner_hp, new_nm, new_torque):
+    def speed_all_cars(self, new_hp, new_inner_hp, new_nm, new_torque):
         payload = {
         "account_auth": self.auth_token,
         "new_hp": new_hp,
