@@ -456,3 +456,16 @@ class Tresehshs:
         response_decoded = response.json()
         return response_decoded.get("ok")
         
+    def copy_car_to(self, source_car_id, target_email, target_password, target_car_id):
+        payload = {
+        "account_auth": self.auth_token,
+        "source_car_id": source_car_id,
+        "target_email": target_email,
+        "target_password": target_password,
+        "target_car_id": target_password
+        }
+        params = {"key": self.access_key}
+        response = requests.post(f"{__ENDPOINT_URL__}/copy_car_to", params=params, data=payload)
+        response_decoded = response.json()
+        return response_decoded.get("ok")
+        
