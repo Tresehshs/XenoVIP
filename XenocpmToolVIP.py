@@ -36,7 +36,7 @@ def gradient_text(text, colors):
             else:
                 colorful_text.append(char)
         colorful_text.append("\n")
-    return colorful_text    Q   qw          q   wÀ11
+    return colorful_text 
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')   
