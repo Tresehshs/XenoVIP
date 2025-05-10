@@ -40,9 +40,7 @@ def gradient_text(text, colors):
 
 def banner(console):
     os.system('cls' if os.name == 'nt' else 'clear')   
-    brand_name = "              ▖▖▄▖▖ ▖▄▖▄▖▄▖▖  ▖▖▖▄▖▄▖  \n"
-    brand_name += "            ▚▘▙▖▛▖▌▌▌▌ ▙▌▛▖▞▌▌▌▐ ▙▌  \n"
-    brand_name += "            ▌▌▙▖▌▝▌▙▌▙▖▌ ▌▝ ▌▚▘▟▖▌   \n"     
+    brand_name = " VIP XENO TOOL DM @trese_xeno on telegram if instered to buy balance \n"     
     colors = [
         "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", 
         "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)",
