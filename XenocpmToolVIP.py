@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import
+import random
 import requests
 from time import sleep
 import os, signal, sys
