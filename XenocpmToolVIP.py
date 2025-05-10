@@ -1006,7 +1006,7 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
                     sleep(4)
                     continue
-            elif service == 58: # Hack ALL Cars Speed
+            elif service == 52: # Hack ALL Cars Speed
                 print(Colorate.Horizontal(Colors.cyan_to_white, '[!] Note: Original speed cannot be restored!'))
                 print(Colorate.Horizontal(Colors.cyan_to_white, '[!] Enter New HP Details.'))
                 new_hp = IntPrompt.ask("[bold][?] Enter New HP[/bold]")
