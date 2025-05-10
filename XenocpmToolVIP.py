@@ -1021,7 +1021,7 @@ if __name__ == "__main__":
                     else: continue
                 else:
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
-                    print(Colorate.Horizontal(Colors.cyan_to_white, '[!] Please use valid values'))
+                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] Please use valid values'))
                     sleep(2)
                     continue
             else: continue
