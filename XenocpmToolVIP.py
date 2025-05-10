@@ -1007,16 +1007,15 @@ if __name__ == "__main__":
                     sleep(4)
                     continue
             elif service == 52: # Hack ALL Cars Speed
-                print(Colorate.Horizontal(Colors.cyan_to_white, '[!] Note: Original speed cannot be restored!'))
-                print(Colorate.Horizontal(Colors.cyan_to_white, '[!] Enter New HP Details.'))
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] Note: Original speed cannot be restored!'))
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] Enter New HP Details.'))
                 new_hp = IntPrompt.ask("[bold][?] Enter New HP[/bold]")
                 new_inner_hp = IntPrompt.ask("[bold][?] Enter New Inner HP[/bold]")
                 new_nm = IntPrompt.ask("[bold][?] Enter New NM[/bold]")
                 new_torque = IntPrompt.ask("[bold][?] Enter New Torque[/bold]")
-                print(Colorate.Horizontal(Colors.cyan_to_white, '[%] Hacking All Cars Speed:'))
+                print(Colorate.Horizontal(Colors.red_to_yellow, '[%] Hacking All Cars Speed:'))
                 if cpm.speed_all_cars(new_hp, new_inner_hp, new_nm, new_torque):
                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
-                    print(Colorate.Horizontal(Colors.green_to_white, '================================'))
                     answ = Prompt.ask("[bold][?] Do You want to Exit?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank you for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
                     else: continue
