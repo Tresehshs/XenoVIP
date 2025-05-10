@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import 13
+import
 import requests
 from time import sleep
 import os, signal, sys
