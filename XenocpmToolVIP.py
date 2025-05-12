@@ -989,14 +989,12 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
                     sleep(4)
                     continue
-            elif service == 51:  # Copy Livery
+            elif service == 51:  # Copy Livery (Same Account)
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[%] THIS FUNCTION MAY TAKE A WHILE, PLEASE WAIT...'))
                 print(Colorate.Horizontal(Colors.red_to_yellow, '[%] COPYING LIVERY'))
                 source_car_id = IntPrompt.ask("[bold][?] ENTER SOURCE CAR ID[/bold]")
-                target_email = prompt_valid_value("[bold blue][?] INSERT TARGET ACCOUNT EMAIL[/bold blue]", "Email", password=False)
-                target_password = prompt_valid_value("[bold][?] ENTER TARGET ACCOUNT PASSWORD[/bold]", "Password", password=True)
-                target_car_id = IntPrompt.ask("[bold blue][?] ENTER TARGET CAR ID[/bold blue]")
-                if cpm.copy_car_to(source_car_id, target_email, target_password, target_car_id):
+                target_car_id = IntPrompt.ask("[bold blue][?] ENTER TARGET CAR ID[/bold blue]")    
+                if cpm.copy_livery(source_car_id, target_car_id):
                     print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold]?", choices=["y", "n"], default="n")
                     if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank you for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
