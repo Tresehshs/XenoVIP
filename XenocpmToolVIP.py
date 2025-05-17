@@ -1019,8 +1019,8 @@ if __name__ == "__main__":
                     if answ == "y": console.print("[bold white] Thank You for using my tool[/bold white]")
                     else: continue
                 else:
-                    console.print("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
-                    console.print("[bold white] Thank You for using my tool[/bold white]")
+                    console.print("[bold green]SUCCESSFUL (✓)[/bold green]")
+                    console.print("[bold white] '[?] Thankyou for using my tool[/bold white]")
                     sleep(2)
                     continue
             else: continue
