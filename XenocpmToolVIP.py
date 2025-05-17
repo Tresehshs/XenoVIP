@@ -1018,11 +1018,7 @@ if __name__ == "__main__":
                     answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("[bold white] Thank You for using my tool[/bold white]")
                     else: continue
-                else:
-                    console.print("[bold red]FAILED[/bold red]")
-                    console.print("[bold cyan] '[!] Please use valid values[/bold cyan]")
                     sleep(2)
-                    continue
             else: continue
             break
                        
