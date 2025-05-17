@@ -1004,22 +1004,23 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
                     sleep(4)
                     continue
-            elif service == 52: # Hack ALL Cars Speed
-                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] Note: Original speed cannot be restored!'))
-                print(Colorate.Horizontal(Colors.red_to_yellow, '[!] Enter New HP Details.'))
-                new_hp = IntPrompt.ask("[bold][?] Enter New HP[/bold]")
-                new_inner_hp = IntPrompt.ask("[bold][?] Enter New Inner HP[/bold]")
-                new_nm = IntPrompt.ask("[bold][?] Enter New NM[/bold]")
-                new_torque = IntPrompt.ask("[bold][?] Enter New Torque[/bold]")
-                print(Colorate.Horizontal(Colors.red_to_yellow, '[%] Hacking All Cars Speed:'))
-                if cpm.speed_all_cars(new_hp, new_inner_hp, new_nm, new_torque):
-                    print(Colorate.Horizontal(Colors.green_to_white, 'SUCCESSFUL (✔)'))
-                    answ = Prompt.ask("[bold][?] Do You want to Exit?", choices=["y", "n"], default="n")
-                    if answ == "y": print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank you for using our tool, please join our Telegram channel: @{__CHANNEL_USERNAME__}.'))
+            elif service == 58:
+                console.print("[bold cyan][!] Note[/bold cyan]: original speed can not be restored!.")
+                console.print("[bold cyan][!] Enter New HP Details.[/bold cyan]")
+                new_hp = IntPrompt.ask("[bold][?]Enter New HP[/bold]")
+                new_inner_hp = IntPrompt.ask("[bold][?]Enter New Inner Hp[/bold]")
+                new_nm = IntPrompt.ask("[bold][?]Enter New NM[/bold]")
+                new_torque = IntPrompt.ask("[bold][?]Enter New Torque[/bold]")
+                console.print("[bold cyan][%] Hacking All Cars Speed[/bold cyan]:",end=None)
+                if cpm.hack_cars_speed(new_hp, new_inner_hp, new_nm, new_torque):
+                    console.print("[bold green]SUCCESFUL (✔)[/bold green]")
+                    console.print("================================")
+                    answ = Prompt.ask("[?] Do You want to Exit ?", choices=["y", "n"], default="n")
+                    if answ == "y": console.print("[bold white] Thank You for using my tool[/bold white]")
                     else: continue
                 else:
-                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] FAILED'))
-                    print(Colorate.Horizontal(Colors.red_to_yellow, '[!] Please use valid values'))
+                    console.print("[bold red]FAILED[/bold red]")
+                    console.print("[bold cyan] '[!] Please use valid values[/bold cyan]")
                     sleep(2)
                     continue
             else: continue
