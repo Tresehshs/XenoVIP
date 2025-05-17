@@ -1004,7 +1004,7 @@ if __name__ == "__main__":
                     print(Colorate.Horizontal(Colors.red_to_yellow, '[!] PLEASE TRY AGAIN'))
                     sleep(4)
                     continue
-            elif service == 58:
+            elif service == 52:
                 console.print("[bold cyan][!] Note[/bold cyan]: original speed can not be restored!.")
                 console.print("[bold cyan][!] Enter New HP Details.[/bold cyan]")
                 new_hp = IntPrompt.ask("[bold][?]Enter New HP[/bold]")
