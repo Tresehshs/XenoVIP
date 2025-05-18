@@ -13,10 +13,6 @@ from pystyle import Colors, Colorate
 
 from xenocpmvip import Tresehshs
 
-__CHANNEL_USERNAME__ = "XenoMainChannel"
-__GROUP_USERNAME__   = "XenoMainChat"
-__Facebook__         = "Johnsteve Biron"
-
 def signal_handler(sig, frame):
     print("\n Bye Bye...")
     sys.exit(0)
@@ -36,88 +32,78 @@ def gradient_text(text, colors):
             else:
                 colorful_text.append(char)
         colorful_text.append("\n")
-    return colorful_text 
+    return colorful_text
+
 
 def banner(console):
-    os.system('cls' if os.name == 'nt' else 'clear')   
-    brand_name = " VIP XENO TOOL DM @trese_xeno on telegram if instered to buy balance \n"     
-    colors = [
-        "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", 
-        "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)", "rgb(255,140,0)", "rgb(255,255,0)",
-        "rgb(255,140,0)"
-    ]
-    colorful_text = gradient_text(brand_name, colors)
-    console.print(colorful_text)
-    print(Colorate.Horizontal(Colors.red_to_yellow, '=================================================================='))
-    print(Colorate.Horizontal(Colors.red_to_yellow, '\t         𝐏𝐋𝐄𝐀𝐒𝐄 𝐋𝐎𝐆𝐎𝐔𝐓 𝐅𝐑𝐎𝐌 𝐂𝐏𝐌 𝐁𝐄𝐅𝐎𝐑𝐄 𝐔𝐒𝐈𝐍𝐆 𝐓𝐇𝐈𝐒 𝐓𝐎𝐎𝐋'))
-    print(Colorate.Horizontal(Colors.red_to_yellow, '    𝐒𝐇𝐀𝐑𝐈𝐍𝐆 𝐓𝐇𝐄 𝐀𝐂𝐂𝐄𝐒𝐒 𝐊𝐄𝐘 𝐈𝐒 𝐍𝐎𝐓 𝐀𝐋𝐋𝐎𝐖𝐄𝐃 𝐀𝐍𝐃 𝐖𝐈𝐋𝐋 𝐁𝐄 𝐁𝐋𝐎𝐂𝐊𝐄𝐃'))
-    print(Colorate.Horizontal(Colors.red_to_yellow, f' ‌           𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦: @{__CHANNEL_USERNAME__} 𝐎𝐫 @{__GROUP_USERNAME__}'))
-    print(Colorate.Horizontal(Colors.red_to_yellow, f'            𝐹𝑎𝑐𝑒𝑏𝑜𝑜𝑘: @{__Facebook__}'))
-    print(Colorate.Horizontal(Colors.red_to_yellow, '=================================================================='))
-
+    os.system('cls' if os.name == 'nt' else 'clear')
+    brand_name = "Xenocpm VIP Tool"
+    
+    text = Text(brand_name, style="bold black")
+    
+    console.print(text)
+    console.print("[bold white] ============================================================[/bold white]")
+    console.print("[bold cyan]      𝗣𝗟𝗘𝗔𝗦𝗘 𝗟𝗢𝗚 𝗢𝗨𝗧 𝗙𝗥𝗢𝗠 𝗖𝗣𝗠 𝗕𝗘𝗙𝗢𝗥𝗘 𝗨𝗦𝗜𝗡𝗚 𝗧𝗛𝗜𝗦 𝗧𝗢𝗢𝗟[/bold cyan]")
+    console.print("[bold red]      𝗦𝗛𝗔𝗥𝗜𝗡𝗚 𝗧𝗛𝗘 𝗔𝗖𝗖𝗘𝗦 𝗞𝗘𝗬 𝗜𝗦 𝗡𝗢𝗧 𝗔𝗟𝗟𝗢𝗪𝗘𝗗[/bold red]")
+    console.print("[bold white] ============================================================[/bold white]")  
+    
 def load_player_data(cpm):
     response = cpm.get_player_data()
     if response.get('ok'):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
-        
-            print(Colorate.Horizontal(Colors.red_to_yellow, '==========[ PLAYER DETAILS ]=========='))
             
-            print(Colorate.Horizontal(Colors.red_to_yellow, f'Name   : {(data.get("Name") if "Name" in data else "UNDEFINED")}.'))
-                
-            print(Colorate.Horizontal(Colors.red_to_yellow, f'LocalID: {data.get("localID")}.'))
+            console.print("[bold][white]========[/cyan][ ᴘʟᴀʏᴇʀ ᴅᴇᴛᴀɪʟꜱ ][cyan]========[/white][/bold]")
             
-            print(Colorate.Horizontal(Colors.red_to_yellow, f'Money  : {data.get("money")}.'))
-            
-            print(Colorate.Horizontal(Colors.red_to_yellow, f'Coins  : {data.get("coin")}.'))
-            
+            console.print(f"[bold white]   >> Name        : {data.get('Name', 'UNDEFINED')}[/bold white]")
+            console.print(f"[bold white]   >> LocalID     : {data.get('localID', 'UNDEFINED')}[/bold white]")
+            console.print(f"[bold white]   >> Money       : {data.get('money', 'UNDEFINED')}[/bold white]")
+            console.print(f"[bold white]   >> Coins       : {data.get('coin', 'UNDEFINED')}[/bold white]") 
             friends_count = len(data.get("FriendsID", []))
-            print(Colorate.Horizontal(Colors.red_to_yellow, f'Friends : {friends_count}'))
-            
+            console.print(f"[bold white]   >> Friends     : {friends_count}[/bold white]")
+            # Count Cars (Checking if it's nested)
             car_data = data.get("carIDnStatus", {}).get("carGeneratedIDs", [])
             # Remove duplicates by converting the list to a set
             unique_car_data = set(car_data)
             car_count = len(unique_car_data)
-            print(Colorate.Horizontal(Colors.red_to_yellow, f'Car Count   : {car_count}'))
-            
+            console.print(f"[bold white]   >> Car Count   : {car_count}[/bold white]")
+        
         else:
-            print(Colorate.Horizontal(Colors.red_to_yellow, '! ERROR: new accounts most be signed-in to the game at least once !.'))
+            console.print("[bold white] '! ERROR: new accounts must be signed-in to the game at least once (✘)[/bold white]")
             sleep(1)
     else:
-        print(Colorate.Horizontal(Colors.red_to_yellow, '! ERROR: seems like your login is not properly set !.'))
-        sleep(1)
+        console.print("[bold white] '! ERROR: seems like your login is not properly set (✘)[/bold white]")
+        exit(1)
 
+     
 
 def load_key_data(cpm):
 
     data = cpm.get_key_data()
     
-    print(Colorate.Horizontal(Colors.red_to_yellow, '========[ ACCESS KEY DETAILS ]========'))
+    console.print("[bold][white]========[/cyan][ 𝘼𝘾𝘾𝙀𝙎𝙎 𝙆𝙀𝙔 𝘿𝙀𝙏𝘼𝙄𝙇𝙎 ][cyan]========[/white][/bold]")
     
-    print(Colorate.Horizontal(Colors.red_to_yellow, f'Access Key : {data.get("access_key")}.'))
+    console.print(f"[bold white]   >> Access Key  [/bold white]: [black]{data.get('access_key')}[/black]")
     
-    print(Colorate.Horizontal(Colors.red_to_yellow, f'Telegram ID : {data.get("telegram_id")}.'))
+    console.print(f"[bold white]   >> Telegram ID : {data.get('telegram_id')}[/bold white]")
     
-    print(Colorate.Horizontal(Colors.red_to_yellow, f'Balance $  : {(data.get("coins") if not data.get("is_unlimited") else "Unlimited")}.'))
-        
+    console.print(f"[bold white]   >> Balance     : {data.get('coins') if not data.get('is_unlimited') else 'Unlimited'}[/bold white]")
     
 
 def prompt_valid_value(content, tag, password=False):
     while True:
         value = Prompt.ask(content, password=password)
         if not value or value.isspace():
-            print(Colorate.Horizontal(Colors.rainbow, f'{tag} cannot be empty or just spaces. Please try again.'))
+            console.print(f"[bold red]{tag} cannot be empty or just spaces. Please try again (✘)[/bold red]")
         else:
             return value
             
 def load_client_details():
     response = requests.get("http://ip-api.com/json")
     data = response.json()
-    print(Colorate.Horizontal(Colors.red_to_yellow, '=============[ 𝐋𝐎𝐂𝐀𝐓𝐈𝐎𝐍 ]============='))
-    print(Colorate.Horizontal(Colors.red_to_yellow, f'Ip Address : {data.get("query")}.'))
-    print(Colorate.Horizontal(Colors.red_to_yellow, f'Location   : {data.get("city")} {data.get("regionName")} {data.get("countryCode")}.'))
-    print(Colorate.Horizontal(Colors.red_to_yellow, f'Country    : {data.get("country")} {data.get("zip")}.'))
-    print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐌𝐄𝐍𝐔 ]==============='))
+    console.print("[bold white] =============[bold cyan][ 𝙇𝙊𝘾𝘼𝙏𝙄𝙊𝙉 ][/bold cyan]=============[/bold white]")
+    console.print(f"[bold white]    >> Country    : {data.get('country')} {data.get('zip')}[/bold white]")
+    console.print("[bold white] ===============[bold cyan][ ＭＥＮＵ ][/bold cyan]===========[/bold white]")
 
 def interpolate_color(start_color, end_color, fraction):
     start_rgb = tuple(int(start_color[i:i+2], 16) for i in (1, 3, 5))
@@ -144,96 +130,114 @@ if __name__ == "__main__":
         acc_email = prompt_valid_value("[bold][?] Account Email[/bold]", "Email", password=False)
         acc_password = prompt_valid_value("[bold][?] Account Password[/bold]", "Password", password=False)
         acc_access_key = prompt_valid_value("[bold][?] Access Key[/bold]", "Access Key", password=False)
-        console.print("[bold cyan][%] Trying to Login[/bold cyan]: ", end=None)
+        console.print("[bold cyan][%] Trying to Login[/bold white]: ", end=None)
         cpm = Tresehshs(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
         if login_response != 0:
             if login_response == 100:
-                print(Colorate.Horizontal(Colors.red_to_yellow, 'ACCOUNT NOT FOUND.'))
+                console.print("[bold red]ACCOUNT NOT FOUND (✘)[/bold red]")
                 sleep(2)
                 continue
             elif login_response == 101:
-                print(Colorate.Horizontal(Colors.red_to_yellow, 'WRONG PASSWORD.'))
+                console.print("[bold red]WRONG PASSWORD (✘)[/bold red]")
                 sleep(2)
                 continue
             elif login_response == 103:
-                print(Colorate.Horizontal(Colors.red_to_yellow, 'INVALID ACCESS KEY.'))
+                console.print("[bold red]INVALID ACCESS KEY (✘)[/bold red]")
                 sleep(2)
                 continue
             else:
-                print(Colorate.Horizontal(Colors.red_to_yellow, 'TRY AGAIN.'))
-                print(Colorate.Horizontal(Colors.red_to_yellow, '! Note: make sure you filled out the fields !.'))
+                console.print("[bold red]TRY AGAIN[/bold red]")
+                console.print("[bold red] '! Note: make sure you filled out the fields ![/bold red]")
                 sleep(2)
                 continue
         else:
-            print(Colorate.Horizontal(Colors.red_to_yellow, 'SUCCESSFUL.'))
-            sleep(2)
+            console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
+            sleep(1)
         while True:
             banner(console)
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"]
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{01}: Increase Money           1.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{02}: Increase Coins           4.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{03}: King Rank                8K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{04}: Change ID                4.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{05}: Change Name              100'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{06}: Change Name (Rainbow)    100'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{07}: Number Plates            2K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{08}: Account Delete           FREE'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{09}: Account Register         FREE'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{10}: Delete Friends           500'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{11}: Unlock Paid Cars         5k'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{12}: Unlock all Cars          6K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{13}: Unlock all Cars Siren    3.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{14}: Unlock w16 Engine        4K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{15}: Unlock All Horns         3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{16}: Unlock Disable Damage    3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{17}: Unlock Unlimited Fuel    3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{18}: Unlock House 3           4K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{19}: Unlock Smoke             4K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{20}: Unlock Wheels            4K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{21}: Unlock Animations        2K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{22}: Unlock Equipaments M     3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{23}: Unlock Equipaments F     3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{24}: Change Race Wins         1K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{25}: Change Race Loses        1K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{26}: Clone Account            7K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{27}: Custom Car Hp            2.5k'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{28}: Custom Angle             1.5k'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{29}: Custom Tire burner       1.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{30}: Custom Car Brake         2K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{31}: Custom Car Millage       2K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{32}: Remove Rear Bumper       2.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{33}: Remove Front Bumper      2.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{34}: Change Gmail             2K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{35}: Change Password          2K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(36): Custom Spoiler           10K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(37): Custom Body Kit          10K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(38): Unlock Premium Wheels    4.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(39): Unlock Toyota Crown      2K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(40): Unlock Clan Hat (M)      3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(41): Remove Head Male         3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(42): Remove Head Female       3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(43): Unlock Clan Top 1 (M)    3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(44): Unlock Clan Top 2 (M)    3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(45): Unlock Clan Top 3 (M)    3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(46): Unlock Clan Top 1 (F)    3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(47): Unlock Clan Top 2 (F)    3K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(48): Unlock Mercedes Cls      4K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(49): Car Incline              1K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(50): Unlock Lambo (IOS ONLY)  5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(51): Clone Livery             2.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '(52): Custom HP (All Cars)     7.5K'))
-            print(Colorate.Horizontal(Colors.red_to_yellow, '{0} : Exit'))
+            choices = ["00", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"]
+            console.print("[bold white][bold red](01)[/bold red]: Increase Money                 [bold red]1500[/bold red][/bold white]")
+            console.print("[bold white][bold red](02)[/bold red]: Increase Coins                 [bold red]1500[/bold red][/bold white]")
+            console.print("[bold white][bold red](03)[/bold red]: King Rank                      [bold red]8000[/bold red][/bold white]")
+            console.print("[bold white][bold red](04)[/bold red]: Change ID                      [bold red]4500[/bold red][/bold white]")
+            console.print("[bold white][bold red](05)[/bold red]: Change Name                    [bold red]100[/bold red][/bold white]")
+            console.print("[bold white][bold red](06)[/bold red]: Change Name (rainbow)          [bold red]100[/bold red][/bold white]")
+            console.print("[bold white][bold red](07)[/bold red]: Number Plates                  [bold red]2000[/bold red][/bold white]")
+            console.print("[bold white][bold red](08)[/bold red]: Account Delete                 [bold red]Free[/bold red][/bold white]")
+            console.print("[bold white][bold red](09)[/bold red]: Account Register               [bold red]Free[/bold red][/bold white]")
+            console.print("[bold white][bold red](10)[/bold red]: Delete Friends                 [bold red]500[/bold red][/bold white]")
+            console.print("[bold white][bold red](11)[/bold red]: Unlock All Paid Cars           [bold red]5000[/bold red][/bold white]")
+            console.print("[bold white][bold red](12)[/bold red]: Unlock All Cars                [bold red]6000[/bold red][/bold white]")
+            console.print("[bold white][bold red](13)[/bold red]: Unlock All Cars Siren          [bold red]3500[/bold red][/bold white]")
+            console.print("[bold white][bold red](14)[/bold red]: Unlock W16 Engine              [bold red]4000[/bold red][/bold white]")
+            console.print("[bold white][bold red](15)[/bold red]: Unlock All Horns               [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](16)[/bold red]: Unlock Disable Damage          [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](17)[/bold red]: Unlock Unlimited Fuel          [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](18)[/bold red]: Unlock Home 3                  [bold red]4000[/bold red][/bold white]")
+            console.print("[bold white][bold red](19)[/bold red]: Unlock Smoke                   [bold red]4000[/bold red][/bold white]")
+            console.print("[bold white][bold red](20)[/bold red]: Unlock Wheels                  [bold red]4000[/bold red][/bold white]")
+            console.print("[bold white][bold red](21)[/bold red]: Unlock Animations              [bold red]2000[/bold red][/bold white]")
+            console.print("[bold white][bold red](22)[/bold red]: Unlock Equipaments M           [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](23)[/bold red]: Unlock Equipaments F           [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](24)[/bold red]: Change Race Wins               [bold red]1000[/bold red][/bold white]")
+            console.print("[bold white][bold red](25)[/bold red]: Change Race Loses              [bold red]1000[/bold red][/bold white")
+            console.print("[bold white][bold red](26)[/bold red]: Clone Account                  [bold red]7000[/bold red][/bold white]")
+            console.print("[bold white][bold red](27)[/bold red]: Custom HP                      [bold red]2500[/bold red][/bold white]")
+            console.print("[bold white][bold red](28)[/bold red]: Custom Angle                   [bold red]1500[/bold red][/bold white]")
+            console.print("[bold white][bold red](29)[/bold red]: Custom Tire burner             [bold red]1500[/bold red][/bold white]")
+            console.print("[bold white][bold red](30)[/bold red]: Custom Car Millage             [bold red]1500[/bold red][/bold white]")
+            console.print("[bold white][bold red](31)[/bold red]: Custom Car Brake               [bold red]2000[/bold red][/bold white]")
+            console.print("[bold white][bold red](32)[/bold red]: Remove Rear Bumper             [bold red]2000[/bold red][/bold white]")
+            console.print("[bold white][bold red](33)[/bold red]: Remove Front Bumper            [bold red]2000[/bold red][/bold white]")
+            console.print("[bold white][bold red](34)[/bold red]: Change Account Password        [bold red]2000[/bold red][/bold white]"
+            console.print("[bold white][bold red](35)[/bold red]: Change Account Email           [bold red]2000[/bold red][/bold white]")
+            console.print("[bold white][bold red](36)[/bold red]: Custom Spoiler                 [bold red]10000[/bold red][/bold white]")
+            console.print("[bold white][bold red](37)[/bold red]: Custom BodyKit                 [bold red]10000[/bold red][/bold white]")
+            console.print("[bold white][bold red](38)[/bold red]: Unlock Premium Wheels          [bold red]4500[/bold red][/bold white]")
+            console.print("[bold white][bold red](39)[/bold red]: Unlock Toyota Crown            [bold red]2000[/bold red][/bold white]")
+            console.print("[bold white][bold red](40)[/bold red]: Unlock Clan Hat (m)            [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](41)[/bold red]: Remove Head Male               [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](42)[/bold red]: Remove Head Female             [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](43)[/bold red]: Unlock Clan Top 1 (m)          [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](44)[/bold red]: Unlock Clan Top 2 (m)          [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](45)[/bold red]: Unlock Clan Top 3 (m)          [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](46)[/bold red]: Unlock Clan Top 1 (fm)         [bold red]3000[/bold red][/bold white]"
+            console.print("[bold white][bold red](47)[/bold red]: Unlock Clan Top 2 (fm)         [bold red]3000[/bold red][/bold white]")
+            console.print("[bold white][bold red](48)[/bold red]: Unlock Mercedes Cls            [bold red]4000[/bold red][/bold white]")
+            console.print("[bold white][bold red](49)[/bold red]: Car Inlclin                    [bold red]1000[/bold red][/bold white]")
+            console.print("[bold white][bold red](50)[/bold red]: Unlock All Lambo (IOS Only)    [bold red]5000[/bold red][/bold white]")
+            console.print("[bold white][bold red](49)[/bold red]: Clone Livery (maintenance)     [bold red]2500[/bold red][/bold white]")
+            console.print("[bold white][bold red](51)[/bold red]: Custom Hp (All Cars)           [bold red]7500[/bold red][/bold white]")
             
-            print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐂𝐏𝐌 ]==============='))
+            console.print("[bold white][bold red](0) [/bold red]: Exit From Tool [/bold cyan]")
+            
+            console.print("[bold white]===============[bold cyan][ Xeno VIP Tool ][/bold cyan]===============[/bold white]")
             
             service = IntPrompt.ask(f"[bold][?] Select a Service [red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
             
-            print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐂𝐏𝐌 ]==============='))
-            
+            console.print("[bold red]===============[bold white][ Emritz VIPP V6.0 ][/bold white]===============[/bold red]") print(Colorate.Horizontal(Colors.red_to_yellow, f'Country    : {data.get("country")} {data.get("zip")}.'))
+    print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐌𝐄𝐍𝐔 ]==============='))
+
+def interpolate_color(start_color, end_color, fraction):
+    start_rgb = tuple(int(start_color[i:i+2], 16) for i in (1, 3, 5))
+    end_rgb = tuple(int(end_color[i:i+2], 16) for i in (1, 3, 5))
+    interpolated_rgb = tuple(int(start + fraction * (end - start)) for start, end in zip(start_rgb, end_rgb))
+    return "{:02x}{:02x}{:02x}".format(*interpolated_rgb)
+
+def rainbow_gradient_string(customer_name):
+    modified_string = ""
+    num_chars = len(customer_name)
+    start_color = "{:06x}".format(random.randint(0, 0xFFFFFF))
+    end_color = "{:06x}".format(random.randint(0, 0xFFFFFF))
+    for i, char in enumerate(customer_name):
+        fraction = i / max(num_chars - 1, 1)
+        interpolated_color = interpolate_color(start_color, end_color, fraction)
+        modified_string += f'[{interpolated_color}]{char}'
+
             if service == 0: # Exit
                 print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our telegram channel: @{__CHANNEL_USERNAME__}.'))
             elif service == 1: # Increase Money
