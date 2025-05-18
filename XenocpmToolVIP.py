@@ -214,7 +214,7 @@ if __name__ == "__main__":
             console.print("[bold white][bold red](51)[/bold red]: Custom Hp (All Cars)           [bold red]7500[/bold red][/bold white]")
             console.print("[bold white][bold red](0) [/bold red]: Exit")
             
-            console.print("[bold cyan===============[bold cyan][ Xeno VIP Tool ][/bold cyan]===============[/bold cyan]")
+            console.print("[bold cyan]===============[bold cyan][ Xeno VIP Tool ][/bold cyan]===============[/bold cyan]")
             
             service = IntPrompt.ask(f"[bold][?] Select a Service [red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
             
