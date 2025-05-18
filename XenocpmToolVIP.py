@@ -73,7 +73,7 @@ def load_player_data(cpm):
             sleep(1)
     else:
         console.print("[bold white] '! ERROR: seems like your login is not properly set (✘)[/bold white]")
-        exit(1)
+        sleep(1)
 
      
 
