@@ -210,7 +210,7 @@ if __name__ == "__main__":
             console.print("[bold white][bold cyan](48)[/bold cyan]: Unlock Mercedes Cls            [bold red]4,000.00[/bold red][/bold white]")
             console.print("[bold white][bold cyan](49)[/bold cyan]: Car Inlclin                    [bold red]1,000.00[/bold red][/bold white]")
             console.print("[bold white][bold cyan](50)[/bold cyan]: Unlock All Lambo (IOS Only)    [bold red]5,000.00[/bold red][/bold white]")
-            console.print("[bold white][bold cyan](51)[/bold cyan]: Clone Livery (maintenance)     [bold red]2,500.00[/bold red][/bold white]")
+            console.print("[bold white][bold cyan](51)[/bold cyan]: Clone Livery                   [bold red]2,500.00[/bold red][/bold white]")
             console.print("[bold white][bold cyan](52)[/bold cyan]: Custom Hp (All Cars)           [bold red]7,500.00[/bold red][/bold white]")
             console.print("[bold white][bold cyan](0) [/bold cyan]: Exit")
             
