@@ -53,7 +53,7 @@ def load_player_data(cpm):
         data = response.get('data')
         if 'floats' in data and 'localID' in data and 'money' in data and 'coin' in data:
             
-            console.print("[bold][white]========[/cyan][ ᴘʟᴀʏᴇʀ ᴅᴇᴛᴀɪʟꜱ ][cyan]========[/white][/bold]")
+            console.print("[bold][cyan]========[/cyan][ ᴘʟᴀʏᴇʀ ᴅᴇᴛᴀɪʟꜱ ][cyan]========[/cyan][/bold]")
             
             console.print(f"[bold white]   >> Name        : {data.get('Name', 'UNDEFINED')}[/bold white]")
             console.print(f"[bold white]   >> LocalID     : {data.get('localID', 'UNDEFINED')}[/bold white]")
