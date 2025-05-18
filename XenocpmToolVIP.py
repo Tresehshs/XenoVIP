@@ -81,7 +81,7 @@ def load_key_data(cpm):
 
     data = cpm.get_key_data()
     
-    console.print("[bold][white]========[/cyan][ 𝘼𝘾𝘾𝙀𝙎𝙎 𝙆𝙀𝙔 𝘿𝙀𝙏𝘼𝙄𝙇𝙎 ][cyan]========[/white][/bold]")
+    console.print("[bold][cyan]========[/cyan][ 𝘼𝘾𝘾𝙀𝙎𝙎 𝙆𝙀𝙔 𝘿𝙀𝙏𝘼𝙄𝙇𝙎 ][cyan]========[/cyan][/bold]")
     
     console.print(f"[bold white]   >> Access Key  [/bold white]: [black]{data.get('access_key')}[/black]")
     
@@ -101,9 +101,9 @@ def prompt_valid_value(content, tag, password=False):
 def load_client_details():
     response = requests.get("http://ip-api.com/json")
     data = response.json()
-    console.print("[bold white] =============[bold cyan][ 𝙇𝙊𝘾𝘼𝙏𝙄𝙊𝙉 ][/bold cyan]=============[/bold white]")
-    console.print(f"[bold white]    >> Country    : {data.get('country')} {data.get('zip')}[/bold white]")
-    console.print("[bold white] ===============[bold cyan][ ＭＥＮＵ ][/bold cyan]===========[/bold white]")
+    console.print("[bold cyan] =============[bold cyan][ 𝙇𝙊𝘾𝘼𝙏𝙄𝙊𝙉 ][/bold cyan]=============[/bold cyan]")
+    console.print(f"[bold cyan]    >> Country    : {data.get('country')} {data.get('zip')}[/bold cyan]")
+    console.print("[bold cyan] ===============[bold cyan][ ＭＥＮＵ ][/bold cyan]===========[/bold cyan]")
 
 def interpolate_color(start_color, end_color, fraction):
     start_rgb = tuple(int(start_color[i:i+2], 16) for i in (1, 3, 5))
