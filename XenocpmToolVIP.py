@@ -153,13 +153,13 @@ if __name__ == "__main__":
                 continue
         else:
             console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
-            sleep(1)
+            sleep(2)
         while True:
             banner(console)
             load_player_data(cpm)
             load_key_data(cpm)
             load_client_details()
-            choices = ["00", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"]
+            choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"]
             console.print("[bold white][bold red](01)[/bold red]: Increase Money                 [bold red]1500[/bold red][/bold white]")
             console.print("[bold white][bold red](02)[/bold red]: Increase Coins                 [bold red]1500[/bold red][/bold white]")
             console.print("[bold white][bold red](03)[/bold red]: King Rank                      [bold red]8000[/bold red][/bold white]")
