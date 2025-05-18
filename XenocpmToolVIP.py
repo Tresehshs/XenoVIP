@@ -212,31 +212,13 @@ if __name__ == "__main__":
             console.print("[bold white][bold red](50)[/bold red]: Unlock All Lambo (IOS Only)    [bold red]5000[/bold red][/bold white]")
             console.print("[bold white][bold red](49)[/bold red]: Clone Livery (maintenance)     [bold red]2500[/bold red][/bold white]")
             console.print("[bold white][bold red](51)[/bold red]: Custom Hp (All Cars)           [bold red]7500[/bold red][/bold white]")
-            
             console.print("[bold white][bold red](0) [/bold red]: Exit From Tool [/bold cyan]")
             
             console.print("[bold white]===============[bold cyan][ Xeno VIP Tool ][/bold cyan]===============[/bold white]")
             
             service = IntPrompt.ask(f"[bold][?] Select a Service [red][1-{choices[-1]} or 0][/red][/bold]", choices=choices, show_choices=False)
             
-            console.print("[bold red]===============[bold white][ Emritz VIPP V6.0 ][/bold white]===============[/bold red]") print(Colorate.Horizontal(Colors.red_to_yellow, f'Country    : {data.get("country")} {data.get("zip")}.'))
-    print(Colorate.Horizontal(Colors.red_to_yellow, '===============[ 𝐌𝐄𝐍𝐔 ]==============='))
-
-def interpolate_color(start_color, end_color, fraction):
-    start_rgb = tuple(int(start_color[i:i+2], 16) for i in (1, 3, 5))
-    end_rgb = tuple(int(end_color[i:i+2], 16) for i in (1, 3, 5))
-    interpolated_rgb = tuple(int(start + fraction * (end - start)) for start, end in zip(start_rgb, end_rgb))
-    return "{:02x}{:02x}{:02x}".format(*interpolated_rgb)
-
-def rainbow_gradient_string(customer_name):
-    modified_string = ""
-    num_chars = len(customer_name)
-    start_color = "{:06x}".format(random.randint(0, 0xFFFFFF))
-    end_color = "{:06x}".format(random.randint(0, 0xFFFFFF))
-    for i, char in enumerate(customer_name):
-        fraction = i / max(num_chars - 1, 1)
-        interpolated_color = interpolate_color(start_color, end_color, fraction)
-        modified_string += f'[{interpolated_color}]{char}'
+            console.print("[bold red]===============[bold white][ Emritz VIPP V6.0 ][/bold white]===============[/bold red]")
 
             if service == 0: # Exit
                 print(Colorate.Horizontal(Colors.red_to_yellow, f'Thank You for using our tool, please join our telegram channel: @{__CHANNEL_USERNAME__}.'))
