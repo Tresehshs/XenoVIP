@@ -193,7 +193,7 @@ if __name__ == "__main__":
             console.print("[bold white][bold red](31)[/bold red]: Custom Car Brake               [bold red]2000[/bold red][/bold white]")
             console.print("[bold white][bold red](32)[/bold red]: Remove Rear Bumper             [bold red]2000[/bold red][/bold white]")
             console.print("[bold white][bold red](33)[/bold red]: Remove Front Bumper            [bold red]2000[/bold red][/bold white]")
-            console.print("[bold white][bold red](34)[/bold red]: Change Account Password        [bold red]2000[/bold red][/bold white]"
+            console.print("[bold white][bold red](34)[/bold red]: Change Account Password        [bold red]2000[/bold red][/bold white]")
             console.print("[bold white][bold red](35)[/bold red]: Change Account Email           [bold red]2000[/bold red][/bold white]")
             console.print("[bold white][bold red](36)[/bold red]: Custom Spoiler                 [bold red]10000[/bold red][/bold white]")
             console.print("[bold white][bold red](37)[/bold red]: Custom BodyKit                 [bold red]10000[/bold red][/bold white]")
@@ -205,7 +205,7 @@ if __name__ == "__main__":
             console.print("[bold white][bold red](43)[/bold red]: Unlock Clan Top 1 (m)          [bold red]3000[/bold red][/bold white]")
             console.print("[bold white][bold red](44)[/bold red]: Unlock Clan Top 2 (m)          [bold red]3000[/bold red][/bold white]")
             console.print("[bold white][bold red](45)[/bold red]: Unlock Clan Top 3 (m)          [bold red]3000[/bold red][/bold white]")
-            console.print("[bold white][bold red](46)[/bold red]: Unlock Clan Top 1 (fm)         [bold red]3000[/bold red][/bold white]"
+            console.print("[bold white][bold red](46)[/bold red]: Unlock Clan Top 1 (fm)         [bold red]3000[/bold red][/bold white]")
             console.print("[bold white][bold red](47)[/bold red]: Unlock Clan Top 2 (fm)         [bold red]3000[/bold red][/bold white]")
             console.print("[bold white][bold red](48)[/bold red]: Unlock Mercedes Cls            [bold red]4000[/bold red][/bold white]")
             console.print("[bold white][bold red](49)[/bold red]: Car Inlclin                    [bold red]1000[/bold red][/bold white]")
