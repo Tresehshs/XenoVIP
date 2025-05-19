@@ -203,7 +203,7 @@ if __name__ == "__main__":
                 ("{34}: Change Account Password", "2K"),
                 ("{35}: Change Account Email   ", "10K"),
                 ("{36}: Custom Spoiler         ", "10K"),
-                ("{37}: Custom BodyKit         ", "4.5K")
+                ("{37}: Custom BodyKit         ", "4.5K"),
                 ("{38}: Unlock Premium Wheels  ", "2K"),     
                 ("{39}: Unlock Toyota Crown    ", "3K"),
                 ("{40}: Unlock Clan Hat (m)    ", "3K"),
