@@ -170,7 +170,7 @@ if __name__ == "__main__":
                 
             menu_price_list = [
                 ("{01}: Increase Money                ", "1500"),
-                ("{02}: Increase Coins                ", "8000"),
+                ("{02}: Increase Coins                ", "1500"),
                 ("{03}: King Rank                     ", "4500"),
                 ("{04}: Change ID                     ", "100"),
                 ("{05}: Change Name                   ", "100"),
@@ -203,10 +203,10 @@ if __name__ == "__main__":
                 ("{32}: Remove Rear Bumper            ", "2000"),
                 ("{33}: Remove Front Bumper           ", "2000"),
                 ("{34}: Change Account Password       ", "2000"),
-                ("{35}: Change Account Email          ", "10000"),
+                ("{35}: Change Account Email          ", "2000"),
                 ("{36}: Custom Spoiler                ", "10000"),
-                ("{37}: Custom BodyKit                ", "4500"),
-                ("{38}: Unlock Premium Wheels         ", "2000"),     
+                ("{37}: Custom BodyKit                ", "10000"),
+                ("{38}: Unlock Premium Wheels         ", "4500"),     
                 ("{39}: Unlock Toyota Crown           ", "3000"),
                 ("{40}: Unlock Clan Hat (m)           ", "3000"),
                 ("{41}: Remove Head Male              ", "3000"),
