@@ -11,6 +11,7 @@ from rich.style import Style
 import pystyle
 from pystyle import Colors, Colorate
 from pystyle import Colorate, Colors, Col
+from pystyle import Colorate, Colors
 
 from xenocpmvip import Tresehshs
 
@@ -161,6 +162,11 @@ if __name__ == "__main__":
             load_key_data(cpm)
             load_client_details()
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"]
+            
+            class Col:
+                red = "\033[91m"
+                reset = "\033[0m"
+                
             menu = [
                 "{01}: Increase Money         ",
                 "{02}: Increase Coins         ",
@@ -269,7 +275,10 @@ if __name__ == "__main__":
             ]
 
 
-            print(Colorate.Horizontal(Colors.rainbow, menu) + price)
+            for i in range(len(menu)):
+            item = menu[i]
+            cost = price[i] if i < len(price) else Col.red + "N/A" + Col.reset
+            print(Colorate.Horizontal(Colors.rainbow, item + " ➤ " + cost))
             
             
             console.print("[bold cyan]===============[bold cyan][ Xeno VIP Tool ][/bold cyan]===============[/bold cyan]")
