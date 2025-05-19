@@ -275,7 +275,7 @@ if __name__ == "__main__":
             ]
 
 
-            for i in range(len(menu)):
+        for i in range(len(menu)):
             item = menu[i]
             cost = price[i] if i < len(price) else Col.red + "N/A" + Col.reset
             print(Colorate.Horizontal(Colors.rainbow, item + " ➤ " + cost))
