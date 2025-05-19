@@ -273,13 +273,12 @@ if __name__ == "__main__":
                 Col.red + "7,500.00" + Col.reset,
                 Col.red + "Free" + Col.reset,
             ]
-            ]
 
 
         for i in range(len(menu)):
-            item = menu[i]
-            cost = price[i] if i < len(price) else Col.red + "N/A" + Col.reset
-            print(Colorate.Horizontal(Colors.rainbow, item + " ➤ " + cost))
+            menu = menu[i]
+            price = price[i] if i < len(price) else Col.red + "N/A" + Col.reset
+            print(Colorate.Horizontal(Colors.rainbow, menu + " ➤ " + price))
             
             
             console.print("[bold cyan]===============[bold cyan][ Xeno VIP Tool ][/bold cyan]===============[/bold cyan]")
