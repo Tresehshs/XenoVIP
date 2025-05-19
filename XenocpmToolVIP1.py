@@ -732,7 +732,7 @@ if __name__ == "__main__":
                     console.print("[bold red]Please Try Again[/bold red]")
                     sleep(2)
                     continue
-            elif service == 34:
+            elif service == 34: # change password
                 console.print("[bold]Enter New Password![/bold]")
                 new_password = prompt_valid_value("[bold][?] Account New Password[/bold]", "Password", password=False)
                 console.print("[bold red][%] Changing Password [/bold red]: ", end=None)
@@ -746,7 +746,7 @@ if __name__ == "__main__":
                     console.print("[bold cyan]PLEASE TRY AGAIN[/bold cyan]")
                     sleep(2)
                     continue
-            elif service == 35:
+            elif service == 35: # Change Gmail
                 console.print("[bold]Enter New Email![/bold]")
                 new_email = prompt_valid_value("[bold][?] Account New Email[/bold]", "Email")
                 console.print("[bold red][%] Changing Email [/bold red]: ", end=None)
@@ -765,7 +765,7 @@ if __name__ == "__main__":
                 console.print("[bold]ENTER SPOILER ID![/bold]")
                 custom = IntPrompt.ask("[bold blue][?]ENTER NEW SPOILER ID[/bold blue]")                
                 console.print("[bold red][%] SAVING YOUR DATA [/bold red]: ", end=None)
-                if cpm.telmunnongodz(car_id, custom):
+                if cpm.spoiler(car_id, custom):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("[bold white] Thank You for using my tool[/bold white]")
@@ -781,7 +781,7 @@ if __name__ == "__main__":
                 console.print("[bold]ENTER BODYKIT ID![/bold]")
                 custom = IntPrompt.ask("[bold blue][?]INSERT BODYKIT ID[/bold blue]")                
                 console.print("[bold red][%] SAVING YOUR DATA [/bold red]: ", end=None)
-                if cpm.telmunnongonz(car_id, custom):
+                if cpm.bodykits(car_id, custom):
                     console.print("[bold green]SUCCESSFUL (✔)[/bold green]")
                     answ = Prompt.ask("[bold][?] DO YOU WANT TO EXIT[/bold] ?", choices=["y", "n"], default="n")
                     if answ == "y": console.print("[bold white] Thank You for using my tool[/bold white]")
