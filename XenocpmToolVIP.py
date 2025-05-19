@@ -251,7 +251,7 @@ if __name__ == "__main__":
                 Col.red + "2,000.00" + Col.reset,
                 Col.red + "2,000.00" + Col.reset,
                 Col.red + "2,000.00" + Col.reset,
-                Col.red + "10,000.00" + Col.reset
+                Col.red + "10,000.00" + Col.reset,
                 Col.red + "10,000.00" + Col.reset,
                 Col.red + "4,500.00" + Col.reset,
                 Col.red + "2,000.00" + Col.reset,
