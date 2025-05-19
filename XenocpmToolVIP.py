@@ -223,7 +223,9 @@ if __name__ == "__main__":
             ]
             
             for menu, price in menu_price_list:
-                print(Colorate.Horizontal(Colors.rainbow, menu) + Col.blue + price + Col.reset)
+                code = menu[:5]  # e.g. {01}:
+                text = menu[5:]  # e.g. Increase Money
+                print(cyan + code + Colorate.Horizontal(Colors.rainbow, text) + blue + price + reset)
 
             
             console.print("[bold cyan]===============[bold cyan][ Xeno VIP Tool ][/bold cyan]===============[/bold cyan]")
