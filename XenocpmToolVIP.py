@@ -163,7 +163,7 @@ if __name__ == "__main__":
             load_client_details()
             choices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52"]
             class Col:
-                cyan = "\033[96m"
+                white = "\033[97m"
                 blue = "\033[94m"
                 reset = "\033[0m"
                 
@@ -226,7 +226,7 @@ if __name__ == "__main__":
             for menu, price in menu_price_list:
                 code = menu[:5]  # e.g. {01}:
                 text = menu[5:]  # e.g. Increase Money
-                print(cyan + code + Colorate.Horizontal(Colors.rainbow, text) + blue + price + reset)
+                print(white + code + Colorate.Horizontal(Colors.rainbow, text) + blue + price + reset)
 
             
             console.print("[bold cyan]===============[bold cyan][ Xeno VIP Tool ][/bold cyan]===============[/bold cyan]")
