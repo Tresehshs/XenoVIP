@@ -987,6 +987,5 @@ if __name__ == "__main__":
                     console.print("[bold white] '[?] Thankyou for using my tool[/bold white]")
                     sleep(2)
                     continue
-            else:
-                continue
+            else:continue
             break               
